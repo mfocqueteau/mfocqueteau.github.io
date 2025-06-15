@@ -1,0 +1,184 @@
+@import "pico.fuchsia.min.css";
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 300;
+	src: url(fonts/Poppins/Poppins-Light.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 500;
+	src: url(fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 600;
+	src: url(fonts/Poppins/Poppins-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 700;
+	src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+}
+
+:root {
+	font-size: 100%;
+	white-space: wrap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	font-family: inherit;
+	margin: 0;
+	max-width: 100%;
+	position: relative;
+}
+*::selection {
+	background-color: hsl(0, 0%, 85%, 85%);
+	color: black;
+}
+
+html {
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	font-family: Poppins, ui-sans-serif, system-ui, -apple-system,
+		BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+		sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+}
+
+.container {
+	--clamp: clamp(1vw, 1rem, 2vw);
+	padding: 1rem var(--clamp) 1rem var(--clamp);
+	width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+}
+
+h1 {
+	font-size: clamp(1.5rem, 2rem, 5vw);
+}
+
+h2 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	margin: 1rem 0;
+}
+
+h2::after {
+	border-top: 2px solid lightgray;
+	content: "";
+	display: block;
+}
+
+article {
+	padding: 1.5rem 2rem;
+}
+
+button,
+[role="button"] {
+	cursor: pointer;
+}
+
+code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
+	font-size: 1em;
+}
+
+img,
+svg {
+	display: block;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+span.badge {
+	--bg-color: lightgray;
+	--fg-color: dimgray;
+	background-color: var(--bg-color);
+	border: 1px solid var(--fg-color);
+	border-radius: 0.4rem;
+	color: var(--fg-color);
+	display: inline-block;
+	margin: 0.25rem;
+	padding: 0.25rem;
+	text-wrap: nowrap;
+}
+
+span.badge.alto {
+	--bg-color: #d4edda;
+	--fg-color: #155724;
+	border-color: #c3e6cb;
+}
+
+span.badge.medio {
+	--bg-color: #fff3cd;
+	--fg-color: #856404;
+	border-color: #ffeeba;
+}
+
+table {
+	table-layout: fixed;
+}
+
+table :is(tr, td) {
+	text-wrap: normal;
+}
+
+table tr :is(th, td):first-child {
+	min-width: 30%;
+	width: 50%;
+}
+
+table tr :is(th, td):last-child {
+	width: 80%;
+}
+
+div.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+div.row > div.col {
+	flex: 1;
+}
+
+div.row > div.col > *:first-child {
+	margin-top: 0;
+}
+
+div.row > div.col > *:last-child {
+	margin-bottom: 0;
+}
